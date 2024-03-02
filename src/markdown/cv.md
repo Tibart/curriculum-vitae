@@ -17,6 +17,9 @@ I am a person doing stuff.
 In the rol of Technical Consultant I mostly working on customization on Microsoft Dynamics 365 implementations. 
 
 # Skills
-- Stuff 4/5
-- English 4/5
-- French 2/5
+## Stuff 4/5
+
+## English 4/5
+
+## French 2/5
+

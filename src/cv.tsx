@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import Intro from './intro';
 import Profile from "./profile";
 import Details from './details';
+import History from './history';
+import Skills from './skills';
 
 export default function CV() {
 
@@ -36,6 +38,8 @@ export default function CV() {
 
                     <div className="p-3 basis-2/3">
                         <Profile markdown={section[2]} />
+						<History markdown={section[3]} />
+						<Skills markdown={section[4]} /> 
                     </div>
 
                 </section>
