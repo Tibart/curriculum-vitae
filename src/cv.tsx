@@ -18,9 +18,9 @@ export default function CV() {
     }, [markdown])
 
     return (
-        <div className="h-screen items-start flex justify-center font-sans bg-neutral">
+        <div className="h-full items-start flex justify-center font-sans bg-neutral">
 
-            <div className="mt-10 w-800px b-rd-1 bg-light drop-shadow">
+            <div className="mt-10 mb-5 w-800px b-rd-1 bg-light drop-shadow">
 
                 <header className="p-2 text-4xl text-center">
                     <Intro markdown={section[0]} />
@@ -32,14 +32,14 @@ export default function CV() {
 
                 <section className="flex flex-nowrap">
                     
-                    <div id="Left" className="p-3 basis-1/3 text-left bg-amber b-rd-tr-3">
+                    <div id="Left" className="p-8 basis-1/3 text-left bg-amber b-rd-tr-3 b-rd-bl-1">
                         <Details markdown={section[1]} />
+						<Skills markdown={section[4]} /> 
                     </div>
 
                     <div className="p-3 basis-2/3">
                         <Profile markdown={section[2]} />
 						<History markdown={section[3]} />
-						<Skills markdown={section[4]} /> 
                     </div>
 
                 </section>
@@ -68,13 +68,6 @@ export default function CV() {
         }
 
         const rawHeader = markdown.split(/\n(?=#\s)/);
-
-        // const header = new Map<string, string>()s
-        // for (let i = 0; i < rawHeader.length; i++) {
-        //     const v = rawHeader[i];
-        //     const k = v.split('\n')[0].replace('#', '').trim().toLowerCase()
-        //     header.set(k, v)
-        // }
 
         // TODO: validate markdown structure
 

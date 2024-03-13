@@ -3,17 +3,22 @@ import Markdown from 'markdown-to-jsx';
 
 export default function Skills(props: MarkdownProps) {
     const text = props.markdown ? props.markdown : ""
+	const skillName = ({children, ...props}) => <div{...props}>{children}</div>
 
     return (
         <>
             <Markdown
                 options={{
                     overrides: {
-                        h2: {
+                        
+                        h1: {
                             props: {
-                                className: 'm-10 p-10'
+                                className: '',
                             }
-                        }
+                        },
+						h2: {
+							component: skillName,
+                        },
                     }
                 }}>
                 {text}
